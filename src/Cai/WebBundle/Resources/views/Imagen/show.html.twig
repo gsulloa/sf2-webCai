@@ -1,9 +1,9 @@
-{% extends '::base.html.twig' %}
+{% extends 'CaiWebBundle::base.html.twig' %}
 
 {% block body -%}
     <h1>Imagen</h1>
 
-    <table class="record_properties">
+    <table class="table">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -14,8 +14,22 @@
                 <td>{{ entity.filename }}</td>
             </tr>
             <tr>
-                <th>Filenamebinary</th>
-                <td>{{ entity.filenamebinary }}</td>
+                <th>Small</th>
+                <td>
+                    <img src="{{ asset('uploads/biblioteca/imagenes/') }}{{ entity.filenamebinary }}/small-{{ entity.filename }}">
+                </td>
+            </tr>
+            <tr>
+                <th>Medium</th>
+                <td>
+                    <img src="{{ asset('uploads/biblioteca/imagenes/') }}{{ entity.filenamebinary }}/medium-{{ entity.filename }}">
+                </td>
+            </tr>
+            <tr>
+                <th>Original</th>
+                <td>
+                    <img src="{{ asset('uploads/biblioteca/imagenes/') }}{{ entity.filenamebinary }}/{{ entity.filename }}">
+                </td>
             </tr>
         </tbody>
     </table>

@@ -1,14 +1,14 @@
-{% extends '::base.html.twig' %}
+{% extends 'CaiWebBundle::base.html.twig' %}
 
 {% block body -%}
     <h1>Imagen list</h1>
 
-    <table class="records_list">
+    <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Filename</th>
-                <th>Filenamebinary</th>
+                <th>Foto</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -17,7 +17,7 @@
             <tr>
                 <td><a href="{{ path('imagen_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.filename }}</td>
-                <td>{{ entity.filenamebinary }}</td>
+                <td><img src="{{ asset('uploads/biblioteca/imagenes/') }}{{ entity.filenamebinary }}/small-{{ entity.filename }}"> </td>
                 <td>
                 <ul>
                     <li>
