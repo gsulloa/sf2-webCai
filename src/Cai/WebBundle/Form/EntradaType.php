@@ -23,6 +23,7 @@ class EntradaType extends AbstractType
                     'todayBtn'=> true,
                 )))
             ->add('categorias')
+            ->add('imagen')
         ;
     }
     

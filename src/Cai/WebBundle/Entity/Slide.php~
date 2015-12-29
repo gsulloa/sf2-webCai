@@ -162,4 +162,27 @@ class Slide
     {
         return $this->titulo;
     }
+
+    /**
+     * Set titulo
+     *
+     * @param string $titulo
+     * @return Slide
+     */
+    public function setTitulo($titulo)
+    {
+        $this->titulo = $titulo;
+
+        return $this;
+    }
+
+    /**
+     * Get titulo
+     *
+     * @return string 
+     */
+    public function getTitulo()
+    {
+        return $this->titulo;
+    }
 }

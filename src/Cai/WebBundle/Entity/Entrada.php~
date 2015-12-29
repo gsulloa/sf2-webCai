@@ -61,6 +61,12 @@ class Entrada
      */
     private $user;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Imagen",inversedBy="entradas")
+     * @ORM\JoinColumn(name="imagen_id", referencedColumnName="id")
+     */
+    private $imagen;
+
 
     /**
      * Get id
@@ -202,5 +208,33 @@ class Entrada
     public function getCategorias()
     {
         return $this->categorias;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \Gulloa\SecurityBundle\Entity\User $user
+     * @return Entrada
+     */
+    public function setUser(\Gulloa\SecurityBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Gulloa\SecurityBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    public function __toString()
+    {
+        return $this->titulo;
     }
 }

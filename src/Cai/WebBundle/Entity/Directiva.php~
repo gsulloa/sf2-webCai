@@ -65,4 +65,49 @@ class Directiva
     {
         return $this->anno;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->personas = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add personas
+     *
+     * @param \Cai\WebBundle\Entity\Persona $personas
+     * @return Directiva
+     */
+    public function addPersona(\Cai\WebBundle\Entity\Persona $personas)
+    {
+        $this->personas[] = $personas;
+
+        return $this;
+    }
+
+    /**
+     * Remove personas
+     *
+     * @param \Cai\WebBundle\Entity\Persona $personas
+     */
+    public function removePersona(\Cai\WebBundle\Entity\Persona $personas)
+    {
+        $this->personas->removeElement($personas);
+    }
+
+    /**
+     * Get personas
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getPersonas()
+    {
+        return $this->personas;
+    }
+
+    public function __toString()
+    {
+        return "Directiva ".$this->anno;
+    }
 }

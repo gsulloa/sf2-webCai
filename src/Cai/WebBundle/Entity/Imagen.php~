@@ -325,44 +325,4 @@ class Imagen
         return $this->filename;
     }
 
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->entradas = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add entradas
-     *
-     * @param \Cai\WebBundle\Entity\Entrada $entradas
-     * @return Imagen
-     */
-    public function addEntrada(\Cai\WebBundle\Entity\Entrada $entradas)
-    {
-        $this->entradas[] = $entradas;
-
-        return $this;
-    }
-
-    /**
-     * Remove entradas
-     *
-     * @param \Cai\WebBundle\Entity\Entrada $entradas
-     */
-    public function removeEntrada(\Cai\WebBundle\Entity\Entrada $entradas)
-    {
-        $this->entradas->removeElement($entradas);
-    }
-
-    /**
-     * Get entradas
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getEntradas()
-    {
-        return $this->entradas;
-    }
 }

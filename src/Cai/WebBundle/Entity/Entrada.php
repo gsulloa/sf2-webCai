@@ -61,6 +61,12 @@ class Entrada
      */
     private $user;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Imagen",inversedBy="entradas")
+     * @ORM\JoinColumn(name="imagen_id", referencedColumnName="id")
+     */
+    private $imagen;
+
 
     /**
      * Get id
@@ -230,5 +236,28 @@ class Entrada
     public function __toString()
     {
         return $this->titulo;
+    }
+
+    /**
+     * Set imagen
+     *
+     * @param \Cai\WebBundle\Entity\Imagen $imagen
+     * @return Entrada
+     */
+    public function setImagen(\Cai\WebBundle\Entity\Imagen $imagen = null)
+    {
+        $this->imagen = $imagen;
+
+        return $this;
+    }
+
+    /**
+     * Get imagen
+     *
+     * @return \Cai\WebBundle\Entity\Imagen 
+     */
+    public function getImagen()
+    {
+        return $this->imagen;
     }
 }
