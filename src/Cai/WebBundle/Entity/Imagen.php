@@ -56,6 +56,11 @@ class Imagen
     protected $entradas;
 
     /**
+     * @ORM\OneToMany(targetEntity="Slide", mappedBy="imagen")
+     */
+    protected $slide;
+
+    /**
      *
      * @Assert\File(
      *  maxSize="15360k",
@@ -364,5 +369,38 @@ class Imagen
     public function getEntradas()
     {
         return $this->entradas;
+    }
+
+    /**
+     * Add slide
+     *
+     * @param \Cai\WebBundle\Entity\Slide $slide
+     * @return Imagen
+     */
+    public function addSlide(\Cai\WebBundle\Entity\Slide $slide)
+    {
+        $this->slide[] = $slide;
+
+        return $this;
+    }
+
+    /**
+     * Remove slide
+     *
+     * @param \Cai\WebBundle\Entity\Slide $slide
+     */
+    public function removeSlide(\Cai\WebBundle\Entity\Slide $slide)
+    {
+        $this->slide->removeElement($slide);
+    }
+
+    /**
+     * Get slide
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getSlide()
+    {
+        return $this->slide;
     }
 }

@@ -237,4 +237,27 @@ class Entrada
     {
         return $this->titulo;
     }
+
+    /**
+     * Set imagen
+     *
+     * @param \Cai\WebBundle\Entity\Imagen $imagen
+     * @return Entrada
+     */
+    public function setImagen(\Cai\WebBundle\Entity\Imagen $imagen = null)
+    {
+        $this->imagen = $imagen;
+
+        return $this;
+    }
+
+    /**
+     * Get imagen
+     *
+     * @return \Cai\WebBundle\Entity\Imagen 
+     */
+    public function getImagen()
+    {
+        return $this->imagen;
+    }
 }

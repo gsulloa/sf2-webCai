@@ -19,6 +19,7 @@ class SlideType extends AbstractType
             ->add('posicion')
             ->add('path')
             ->add('slider')
+            ->add('imagen')
         ;
     }
     

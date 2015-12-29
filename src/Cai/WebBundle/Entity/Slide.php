@@ -55,6 +55,12 @@ class Slide
      */
     private $titulo;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Imagen", inversedBy="slide")
+     * @ORM\JoinColumn(name="imagen_id", referencedColumnName="id")
+     */
+    private $imagen;
+
 
     /**
      * Get id
@@ -184,5 +190,30 @@ class Slide
     public function getTitulo()
     {
         return $this->titulo;
+    }
+
+    
+
+    /**
+     * Set imagen
+     *
+     * @param \Cai\WebBundle\Entity\Imagen $imagen
+     * @return Slide
+     */
+    public function setImagen(\Cai\WebBundle\Entity\Imagen $imagen = null)
+    {
+        $this->imagen = $imagen;
+
+        return $this;
+    }
+
+    /**
+     * Get imagen
+     *
+     * @return \Cai\WebBundle\Entity\Imagen 
+     */
+    public function getImagen()
+    {
+        return $this->imagen;
     }
 }
