@@ -1,0 +1,30 @@
+imagen:
+    path:     /
+    defaults: { _controller: "CaiWebBundle:Imagen:index" }
+
+imagen_show:
+    path:     /{id}/show
+    defaults: { _controller: "CaiWebBundle:Imagen:show" }
+
+imagen_new:
+    path:     /new
+    defaults: { _controller: "CaiWebBundle:Imagen:new" }
+
+imagen_create:
+    path:     /create
+    defaults: { _controller: "CaiWebBundle:Imagen:create" }
+    methods:  POST
+
+imagen_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CaiWebBundle:Imagen:edit" }
+
+imagen_update:
+    path:     /{id}/update
+    defaults: { _controller: "CaiWebBundle:Imagen:update" }
+    methods:  [POST, PUT]
+
+imagen_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CaiWebBundle:Imagen:delete" }
+    methods:  [POST, DELETE]
