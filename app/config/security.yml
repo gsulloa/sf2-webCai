@@ -8,19 +8,12 @@ security:
     providers:
         chain_provider:
             chain:
-                providers: [in_memory, users_provider]
+                providers: users_provider
         users_provider:
             entity:
                 class: GulloaSecurityBundle:User
                 property: username
-        in_memory:
-              memory:
-                  users:
-                      root:
-                          password: 1q2w3e4r5tgulloa
-                          roles: 'ROLE_SUPER_ADMIN'
     encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
         Gulloa\SecurityBundle\Entity\User:
             algorithm: bcrypt
             cost: 12
