@@ -1,0 +1,12 @@
+contacto:
+    path:     /
+    defaults: { _controller: "CaiWebBundle:Contacto:index" }
+
+contacto_edit:
+    path:     /edit
+    defaults: { _controller: "CaiWebBundle:Contacto:edit" }
+
+contacto_update:
+    path:     /update
+    defaults: { _controller: "CaiWebBundle:Contacto:update" }
+    methods:  [POST, PUT]

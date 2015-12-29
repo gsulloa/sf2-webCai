@@ -1,0 +1,54 @@
+  # To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+    role_hierarchy:
+        ROLE_SUPER_ADMIN:   ROLE_ADMIN
+        ROLE_ADMIN:   ['ROLE_USER', 'ROLE_EDITOR']
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        chain_provider:
+            chain:
+                providers: [in_memory, users_provider]
+        users_provider:
+            entity:
+                class: GulloaSecurityBundle:User
+                property: username
+        in_memory:
+              memory:
+                  users:
+                      root:
+                          password: 1q2w3e4r5tgulloa
+                          roles: 'ROLE_SUPER_ADMIN'
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        Gulloa\SecurityBundle\Entity\User:
+            algorithm: bcrypt
+            cost: 12
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        default:
+            form_login:
+                login_path:           /login
+                check_path:           /login_check
+                default_target_path:  default_target
+            logout:
+                path:   /logout
+                target: /login
+            anonymous: ~
+        main:
+            anonymous: ~
+            # activate different ways to authenticate
+
+            # http_basic: ~
+            # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: ~
+            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+
+
+    access_control:
+        - { path: ^/backend, roles: ROLE_ADMIN }
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }

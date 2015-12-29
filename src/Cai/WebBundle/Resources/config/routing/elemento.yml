@@ -1,0 +1,30 @@
+elemento:
+    path:     /
+    defaults: { _controller: "CaiWebBundle:Elemento:index" }
+
+elemento_show:
+    path:     /{id}/show
+    defaults: { _controller: "CaiWebBundle:Elemento:show" }
+
+elemento_new:
+    path:     /new
+    defaults: { _controller: "CaiWebBundle:Elemento:new" }
+
+elemento_create:
+    path:     /create
+    defaults: { _controller: "CaiWebBundle:Elemento:create" }
+    methods:  POST
+
+elemento_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CaiWebBundle:Elemento:edit" }
+
+elemento_update:
+    path:     /{id}/update
+    defaults: { _controller: "CaiWebBundle:Elemento:update" }
+    methods:  [POST, PUT]
+
+elemento_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CaiWebBundle:Elemento:delete" }
+    methods:  [POST, DELETE]

@@ -1,0 +1,40 @@
+{% extends 'CaiWebBundle::base.html.twig' %}
+
+{% block body -%}
+    <h1>Categoria</h1>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th>Etiqueta</th>
+                <td>{{ entity.etiqueta }}</td>
+            </tr>
+            <tr>
+                <th>Usuarios</th>
+                <td>{{ entity.users | length }}</td>
+            </tr>
+            <tr>
+                <th>Entradas</th>
+                <td>{{ entity.entradas | length }}</td>
+            </tr>
+            <tr>
+                <th>Páginas</th>
+                <td>{{ entity.entradas | length }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('categoria') }}">
+            Volver
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('categoria_edit', { 'id': entity.id }) }}">
+            Editar
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

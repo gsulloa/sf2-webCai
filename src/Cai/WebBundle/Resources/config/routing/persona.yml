@@ -1,0 +1,30 @@
+persona:
+    path:     /
+    defaults: { _controller: "CaiWebBundle:Persona:index" }
+
+persona_show:
+    path:     /{id}/show
+    defaults: { _controller: "CaiWebBundle:Persona:show" }
+
+persona_new:
+    path:     /new
+    defaults: { _controller: "CaiWebBundle:Persona:new" }
+
+persona_create:
+    path:     /create
+    defaults: { _controller: "CaiWebBundle:Persona:create" }
+    methods:  POST
+
+persona_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CaiWebBundle:Persona:edit" }
+
+persona_update:
+    path:     /{id}/update
+    defaults: { _controller: "CaiWebBundle:Persona:update" }
+    methods:  [POST, PUT]
+
+persona_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CaiWebBundle:Persona:delete" }
+    methods:  [POST, DELETE]

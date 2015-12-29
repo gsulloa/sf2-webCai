@@ -1,0 +1,30 @@
+menu:
+    path:     /
+    defaults: { _controller: "CaiWebBundle:Menu:index" }
+
+menu_show:
+    path:     /{id}/show
+    defaults: { _controller: "CaiWebBundle:Menu:show" }
+
+menu_new:
+    path:     /new
+    defaults: { _controller: "CaiWebBundle:Menu:new" }
+
+menu_create:
+    path:     /create
+    defaults: { _controller: "CaiWebBundle:Menu:create" }
+    methods:  POST
+
+menu_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CaiWebBundle:Menu:edit" }
+
+menu_update:
+    path:     /{id}/update
+    defaults: { _controller: "CaiWebBundle:Menu:update" }
+    methods:  [POST, PUT]
+
+menu_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CaiWebBundle:Menu:delete" }
+    methods:  [POST, DELETE]

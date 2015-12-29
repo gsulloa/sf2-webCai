@@ -1,0 +1,30 @@
+slider:
+    path:     /
+    defaults: { _controller: "CaiWebBundle:Slider:index" }
+
+slider_show:
+    path:     /{id}/show
+    defaults: { _controller: "CaiWebBundle:Slider:show" }
+
+slider_new:
+    path:     /new
+    defaults: { _controller: "CaiWebBundle:Slider:new" }
+
+slider_create:
+    path:     /create
+    defaults: { _controller: "CaiWebBundle:Slider:create" }
+    methods:  POST
+
+slider_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CaiWebBundle:Slider:edit" }
+
+slider_update:
+    path:     /{id}/update
+    defaults: { _controller: "CaiWebBundle:Slider:update" }
+    methods:  [POST, PUT]
+
+slider_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CaiWebBundle:Slider:delete" }
+    methods:  [POST, DELETE]

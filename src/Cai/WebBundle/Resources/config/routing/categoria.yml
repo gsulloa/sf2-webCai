@@ -1,0 +1,30 @@
+categoria:
+    path:     /
+    defaults: { _controller: "CaiWebBundle:Categoria:index" }
+
+categoria_show:
+    path:     /{id}/show
+    defaults: { _controller: "CaiWebBundle:Categoria:show" }
+
+categoria_new:
+    path:     /new
+    defaults: { _controller: "CaiWebBundle:Categoria:new" }
+
+categoria_create:
+    path:     /create
+    defaults: { _controller: "CaiWebBundle:Categoria:create" }
+    methods:  POST
+
+categoria_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CaiWebBundle:Categoria:edit" }
+
+categoria_update:
+    path:     /{id}/update
+    defaults: { _controller: "CaiWebBundle:Categoria:update" }
+    methods:  [POST, PUT]
+
+categoria_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CaiWebBundle:Categoria:delete" }
+    methods:  [POST, DELETE]

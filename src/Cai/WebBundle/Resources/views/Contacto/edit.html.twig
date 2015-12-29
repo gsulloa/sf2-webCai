@@ -1,0 +1,15 @@
+{% extends 'CaiWebBundle::base.html.twig' %}
+
+{% block body -%}
+    <h1>Contacto edit</h1>
+
+    {{ form(edit_form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('contacto') }}" class="btn btn-default">
+            Volver
+        </a>
+    </li>
+</ul>
+{% endblock %}

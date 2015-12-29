@@ -1,0 +1,120 @@
+<?php
+namespace Gulloa\SecurityBundle\Entity;
+
+use Doctrine\ORM\Mapping AS ORM;
+use Symfony\Component\Security\Core\Role\RoleInterface;
+
+/**
+ * @ORM\Entity
+ */
+class Role implements RoleInterface
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=false)
+     */
+    private $etiqueta;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="User", mappedBy="roles")
+     */
+    private $users;
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->users = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set etiqueta
+     *
+     * @param string $etiqueta
+     * @return Role
+     */
+    public function setEtiqueta($etiqueta)
+    {
+        $this->etiqueta = $etiqueta;
+
+        return $this;
+    }
+
+    /**
+     * Get etiqueta
+     *
+     * @return string 
+     */
+    public function getEtiqueta()
+    {
+        return $this->etiqueta;
+    }
+
+    /**
+     * Add user
+     *
+     * @param \Gulloa\SecurityBundle\Entity\User $user
+     * @return Role
+     */
+    public function addUser(\Gulloa\SecurityBundle\Entity\User $user)
+    {
+        $this->users[] = $user;
+
+        return $this;
+    }
+
+    /**
+     * Remove user
+     *
+     * @param \Gulloa\SecurityBundle\Entity\User $user
+     */
+    public function removeUser(\Gulloa\SecurityBundle\Entity\User $user)
+    {
+        $this->users->removeElement($user);
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getUser()
+    {
+        return $this->users;
+    }
+
+    public  function  __toString(){
+        return $this->etiqueta;
+    }
+
+    /**
+     * Get users
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getUsers()
+    {
+        return $this->users;
+    }
+
+    public function getRole()
+    {
+        return $this->etiqueta;
+    }
+}

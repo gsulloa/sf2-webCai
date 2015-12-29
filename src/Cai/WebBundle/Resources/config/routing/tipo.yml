@@ -1,0 +1,30 @@
+tipo:
+    path:     /
+    defaults: { _controller: "CaiWebBundle:Tipo:index" }
+
+tipo_show:
+    path:     /{id}/show
+    defaults: { _controller: "CaiWebBundle:Tipo:show" }
+
+tipo_new:
+    path:     /new
+    defaults: { _controller: "CaiWebBundle:Tipo:new" }
+
+tipo_create:
+    path:     /create
+    defaults: { _controller: "CaiWebBundle:Tipo:create" }
+    methods:  POST
+
+tipo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CaiWebBundle:Tipo:edit" }
+
+tipo_update:
+    path:     /{id}/update
+    defaults: { _controller: "CaiWebBundle:Tipo:update" }
+    methods:  [POST, PUT]
+
+tipo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CaiWebBundle:Tipo:delete" }
+    methods:  [POST, DELETE]

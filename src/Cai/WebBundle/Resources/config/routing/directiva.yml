@@ -1,0 +1,30 @@
+directiva:
+    path:     /
+    defaults: { _controller: "CaiWebBundle:Directiva:index" }
+
+directiva_show:
+    path:     /{id}/show
+    defaults: { _controller: "CaiWebBundle:Directiva:show" }
+
+directiva_new:
+    path:     /new
+    defaults: { _controller: "CaiWebBundle:Directiva:new" }
+
+directiva_create:
+    path:     /create
+    defaults: { _controller: "CaiWebBundle:Directiva:create" }
+    methods:  POST
+
+directiva_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CaiWebBundle:Directiva:edit" }
+
+directiva_update:
+    path:     /{id}/update
+    defaults: { _controller: "CaiWebBundle:Directiva:update" }
+    methods:  [POST, PUT]
+
+directiva_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CaiWebBundle:Directiva:delete" }
+    methods:  [POST, DELETE]

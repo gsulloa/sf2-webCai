@@ -1,0 +1,26 @@
+{% extends 'CaiWebBundle::base.html.twig' %}
+
+{% block body -%}
+    <h1>Editar Entrada</h1>
+
+    {{ form(edit_form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('entrada') }}">
+            Volver
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
+{% block stylesheets %}
+    {{ form_stylesheet(edit_form) }}
+    <script src="{{ asset('public/ckeditor/ckeditor.js') }}"></script>
+{% endblock %}
+{% block javascripts %}
+    {{ form_javascript(edit_form) }}
+    <script>
+        CKEDITOR.replace( 'cai_webbundle_entrada_cuerpo' );
+    </script>
+{% endblock %}

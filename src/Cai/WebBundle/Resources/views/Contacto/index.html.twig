@@ -1,0 +1,46 @@
+{% extends 'CaiWebBundle::base.html.twig' %}
+
+{% block body -%}
+    <h1>Contacto</h1>
+    <table class="table table-bordered table-hover">
+        <tbody>
+        <tr>
+            <th>Lema</th>
+            <td>{{ entity.lema }}</td>
+        </tr>
+        <tr>
+            <th>Direccion</th>
+            <td>{{ entity.direccion }}</td>
+        </tr>
+        <tr>
+            <th>Telefono</th>
+            <td>{{ entity.telefono }}</td>
+        </tr>
+        <tr>
+            <th>Twitter</th>
+            <td>{{ entity.twitter }}</td>
+        </tr>
+        <tr>
+            <th>Facebook</th>
+            <td>{{ entity.facebook }}</td>
+        </tr>
+        <tr>
+            <th>Youtube</th>
+            <td>{{ entity.youtube }}</td>
+        </tr>
+        <tr>
+            <th>Mail</th>
+            <td>{{ entity.mail }}</td>
+        </tr>
+        <tr>
+            <th>Vimeo</th>
+            <td>{{ entity.vimeo }}</td>
+        </tr>
+        <tr>
+            <th>Descripcion</th>
+            <td>{{ entity.descripcion }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="{{ path('contacto_edit') }}" class="btn btn-default">Editar</a>
+    {% endblock %}
