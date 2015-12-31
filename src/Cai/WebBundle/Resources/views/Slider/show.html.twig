@@ -1,5 +1,44 @@
 {% extends 'CaiWebBundle::base.html.twig' %}
+{% block stylesheets %}
+<style>
+    .slide_img{
+        width:220px;
+        height:220px;
+        padding:10px;
+        border:1px solid #aaaaaa;
+    }
 
+</style>
+    <style>
+        #image_selector_div{
+            position: fixed;
+            width: 80%;
+            height: 80%;
+            z-index: 10000000;
+            top: 10%;
+            left: 10%;
+            padding: 15px;
+            background-color: white;
+            border-radius: 15px;
+            border: 2px solid black;
+            overflow-y: scroll;
+        }
+        #image_selector_background{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: black;
+            opacity: 0.9;
+            z-index: 9999999;
+        }
+        .col_selecting_image{
+            padding: 10px;
+            height: 220px;
+        }
+    </style>
+{% endblock %}
 {% block body -%}
     <div class="row">
         <h1>Slider</h1>
@@ -25,9 +64,39 @@
     <div class="row">
         <hr>
         <h2>Slides</h2>
-        <button class="btn btn-default text-right">Agregar Slide</button>
+        <button class="btn btn-default text-right" id="add_slide">Agregar Slide</button>
+        <br><br>
+
+
         <form action="#" method="post" id="slides-form-generator">
             {% if previous_slides %}
+                <div class="container" id="slides">
+                    {% set i = 0 %}
+                    {% for slide in entity.slides %}
+                        <div class="row" id="{{ i }}">
+                            <div class="col-md-4">
+                                <div id="slide_{{ i }}" class="slide_img" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                    <img class="img" id="img_slide_{{ i }}" draggable="true" ondragstart="drag(event)" src=" {{ asset('uploads/biblioteca/imagenes/') }}{{ slide.imagen.filenamebinary }}/small-{{ slide.imagen }} " >
+                                </div>
+                                <input name="" type="hidden">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <label for="path_slide_{{ i }}">Path: </label>
+                                    <input class="path" type="text" id="path_slide_{{ i }}" value="{{ slide.path }}">
+                                </div>
+                                <div class="row">
+                                    <div class="img_selector btn btn-primary" id="img_selector_slide_{{ i }}">Escoger imágen</div>
+                                </div>
+                                <div class="row">
+                                    <div id="delete_{{ i }}" class="delete_slide btn btn-danger">Eliminar</div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        {% set i = i + 1 %}
+                    {% endfor %}
+                </div>
             {% else %}
             {% endif %}
         </form>
@@ -41,11 +110,168 @@
     </li>
     <li>
         <a href="{{ path('slider_edit', { 'id': entity.id }) }}">
-            Edit
+            Editar
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+
+    <div id="image_selector_div" hidden>
+        {% set count = 0 %}
+        {% for image in images %}
+        {% if count == 0 %}<div class="row">{% endif %}
+        <div class="col-md-3 col_selecting_image">
+            <img id="image_{{ image.id }}" class="selecting_image img-responsive" src="{{ asset('uploads/biblioteca/imagenes/') }}{{ image.filenamebinary }}/small-{{ image }}"/>
+        </div>
+        {% set count = count + 1 %}
+        {% if count == 4 %}</div><br>{% set count = 0 %}{% endif %}
+        {% endfor %}
+        {% if count < 4 %}</div>{% endif %}
+        <div class="row">
+            <button id="image_select" class="btn btn-primary pull-right">Seleccionar</button>
+        </div>
+    </div>
+    <div id="image_selector_background" hidden />
+
+
 {% endblock %}
 {% block javascripts %}
+    <script>
+        var count = {{ entity.slides | length }};
+
+        $('#add_slide').click(function () {
+            //crear div de class row
+            var row = $('<div class="row" id="'+count+'"></div>');
+
+            //Crear visualizador
+            //crear div de class col-md-4
+            var col_img = $('<div class="col-md-4"></div> ');
+            //crear div con bordes, identificador de slide y con drop activado
+            var div_slide_droppable = $('<div id="slide_'+count+'" class="slide_img" ondrop="drop(event)" ondragover="allowDrop(event)"></div>');
+            //crear imagen draggable
+            var img_draggable = $('<img class="img" id="img_slide_'+count+'" draggable="true" ondragstart="drag(event)" src="#" >');
+
+
+            //Crear Formulario
+            // crear div class col-md-8
+            var col_form = $('<div class="col-md-8"></div> ');
+            // crear rows
+            var col_form_row1 =  $('<div class="row"></div>');
+            var col_form_row2 =  $('<div class="row"></div>');
+            var col_form_row3 =  $('<div class="row"></div>');
+            // crear label path
+            var path_label = $('<label for="path_slide'+count+'">Path: </label>');
+            //crear input path
+            var path_input = $('<input class="path" type="text" id="path_slide_'+count+'">');
+            //crear btn imagen selector
+            var img_selector = $('<div class="img_selector btn btn-primary" id="img_selector_slide_'+count+'">Escoger imágen</div>');
+            //agregar evento image selector
+            $(img_selector).click(function () {
+                show_image_selector($(this));
+            });
+            //crear btn delete slide
+            var delete_slide = $('<div id="delete_'+count+'" class="delete_slide btn btn-danger">Eliminar</div>');
+            //agregarle evento de eliminar slide
+            $(delete_slide).click(function () {
+                deleting_slide($(this))
+            });
+            //unir todo al html
+            //visualizador
+            div_slide_droppable.append(img_draggable);
+            col_img.append(div_slide_droppable);
+            row.append(col_img);
+            //formulario
+            col_form_row1.append(path_label,path_input);
+            col_form_row2.append(img_selector);
+            col_form_row3.append(delete_slide);
+            col_form.append(col_form_row1,col_form_row2,col_form_row3);
+            row.append(col_form);
+            $('#slides').append(row,$('<br>'));
+            count++;
+        });
+
+        //EVENTOS
+        $('.delete_slide').click(function () {
+            deleting_slide($(this))
+        });
+        $('.path').keypress(function () {
+            $(this).attr("value", $(this).val());
+        });
+
+
+        //elimina un slide.
+        function deleting_slide(element){
+            element.parent().parent().parent().remove();
+        }
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            //Obtiene la row origen
+            var origenRow = $('#'+data).parent().parent().parent();
+
+            //Obtiene la row destino
+            var target = ev.target;
+            var targetRow;
+            if($(target)[0].nodeName == "IMG"){
+                targetRow = $(target).parent().parent().parent();
+            }else if($(target)[0].nodeName == "DIV"){
+                targetRow = $(target).parent().parent();
+            }
+            //Intercambia el contenido de los row
+            var aux = origenRow.html();
+            origenRow.html(targetRow.html());
+            targetRow.html(aux);
+            $('.path').keypress(function () {
+                $(this).attr("value", $(this).val());
+            });
+            $('.delete_slide').click(function () {
+                deleting_slide($(this))
+            });
+        }
+    </script>
+    <script>
+        //ImageSelector
+        var selected_image;
+        var row_changing;
+        $('.selecting_image').click(function () {
+            $('.col_selecting_image').css('background-color','white');
+            $(this).parent().css('background-color','blue');
+            selected_image = $(this)[0];
+        });
+        $('.selecting_image').dblclick(function () {
+            changeImage();
+        });
+        $('#image_select').click(function () {
+            changeImage();
+        });
+        function changeImage(){
+            hide_image_selector();
+            $('.row#'+row_changing).children(".col-md-4").children().children().attr('src',selected_image.src);
+        }
+        $('.img_selector').click(function () {
+            show_image_selector($(this));
+        });
+        $('#image_selector_background').click(function () {
+            hide_image_selector();
+        });
+        //Muestra el selector de imagenes
+        function show_image_selector(e){
+            row_changing = e[0].id.substr(19);
+            $("#image_selector_div").show(500);
+            $("#image_selector_background").show();
+        }
+        //Esconde el selector de imagenes
+        function hide_image_selector(){
+            $("#image_selector_div").hide(500);
+            $("#image_selector_background").hide();
+            $('.col_selecting_image').css('background-color','white');
+        }
+    </script>
 {% endblock %}

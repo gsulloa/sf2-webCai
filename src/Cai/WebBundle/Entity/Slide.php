@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Slide
 {
+    public $deleteForm;
     /**
      * @var integer
      *
@@ -41,7 +42,7 @@ class Slide
      * @ORM\JoinColumn(name="slider_id", referencedColumnName="id")
      */
     private $slider;
-    
+
 
     /**
      * @ORM\ManyToOne(targetEntity="Imagen", inversedBy="slide")
