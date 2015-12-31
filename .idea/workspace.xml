@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="137ab380-85d0-4c37-bae2-fb12ce286681" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Controller/SliderController.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Controller/SliderController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/show.html.twig" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/base.html.twig" />
     </list>
     <ignored path="gulloasecurity.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +49,8 @@
       <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55689657">
-              <caret line="80" column="52" selection-start-line="80" selection-start-column="52" selection-end-line="80" selection-end-column="52" />
+            <state vertical-scroll-proportion="6.158621">
+              <caret line="258" column="12" selection-start-line="258" selection-start-column="12" selection-end-line="258" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -911,8 +907,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55689657">
-          <caret line="80" column="52" selection-start-line="80" selection-start-column="52" selection-end-line="80" selection-end-column="52" />
+        <state vertical-scroll-proportion="6.158621">
+          <caret line="258" column="12" selection-start-line="258" selection-start-column="12" selection-end-line="258" selection-end-column="12" />
           <folding />
         </state>
       </provider>
