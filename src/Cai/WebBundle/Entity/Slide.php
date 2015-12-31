@@ -21,12 +21,6 @@ class Slide
      */
     private $id;
 
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="time", type="integer")
-     */
-    private $time;
 
     /**
      * @var integer
@@ -72,28 +66,6 @@ class Slide
         return $this->id;
     }
 
-    /**
-     * Set time
-     *
-     * @param integer $time
-     * @return Slide
-     */
-    public function setTime($time)
-    {
-        $this->time = $time;
-
-        return $this;
-    }
-
-    /**
-     * Get time
-     *
-     * @return integer 
-     */
-    public function getTime()
-    {
-        return $this->time;
-    }
 
     /**
      * Set posicion

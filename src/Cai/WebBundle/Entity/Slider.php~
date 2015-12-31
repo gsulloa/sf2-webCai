@@ -33,6 +33,12 @@ class Slider
      */
     private $slides;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="time", type="integer")
+     */
+    private $time;
 
     /**
      * Get id

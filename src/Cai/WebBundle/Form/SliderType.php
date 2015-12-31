@@ -16,6 +16,7 @@ class SliderType extends AbstractType
     {
         $builder
             ->add('titulo')
+            ->add('time')
         ;
     }
     

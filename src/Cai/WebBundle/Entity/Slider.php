@@ -33,6 +33,12 @@ class Slider
      */
     private $slides;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="time", type="integer")
+     */
+    private $time;
 
     /**
      * Get id
@@ -109,5 +115,28 @@ class Slider
     public function __toString()
     {
         return $this->titulo;
+    }
+
+    /**
+     * Set time
+     *
+     * @param integer $time
+     * @return Slider
+     */
+    public function setTime($time)
+    {
+        $this->time = $time;
+
+        return $this;
+    }
+
+    /**
+     * Get time
+     *
+     * @return integer 
+     */
+    public function getTime()
+    {
+        return $this->time;
     }
 }
