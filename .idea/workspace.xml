@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="137ab380-85d0-4c37-bae2-fb12ce286681" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slider.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Form/SlideType.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Form/SlideType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Form/SliderType.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Form/SliderType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slide/index.html.twig" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slide/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slide/show.html.twig" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slide/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/index.html.twig" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/show.html.twig" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/show.html.twig" />
     </list>
     <ignored path="gulloasecurity.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,83 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Imagen.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Imagen.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
-              <folding>
-                <element signature="e#40#72#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Slide.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Slide.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9230769">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Slider.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="35.23077">
-              <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slide/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5017241">
-              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SliderType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Form/SliderType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
-              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SlideType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Form/SlideType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.33103448">
+              <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -178,13 +98,13 @@
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Imagen.php" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Imagen/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Form/SlideType.php" />
-        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Form/SliderType.php" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slider.php" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slide/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slide/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php" />
       </list>
     </option>
   </component>
@@ -870,24 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Imagen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
-          <folding>
-            <element signature="e#40#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Form/SlideType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.153846">
@@ -920,34 +822,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slider.php">
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="35.23077">
-          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slide/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5017241">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385">
+        <state vertical-scroll-proportion="0.49827588">
           <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/show.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slide/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5017241">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.5275862">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5793103">
+          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Imagen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.029310346">
+          <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
+          <folding>
+            <element signature="e#40#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33103448">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
           <folding />
         </state>
       </provider>

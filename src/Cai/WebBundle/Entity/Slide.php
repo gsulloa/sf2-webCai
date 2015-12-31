@@ -41,13 +41,7 @@ class Slide
      * @ORM\JoinColumn(name="slider_id", referencedColumnName="id")
      */
     private $slider;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="titulo", type="string", length=255)
-     */
-    private $titulo;
+    
 
     /**
      * @ORM\ManyToOne(targetEntity="Imagen", inversedBy="slide")
@@ -136,33 +130,7 @@ class Slide
         return $this->slider;
     }
 
-    public function __toString()
-    {
-        return $this->titulo;
-    }
 
-    /**
-     * Set titulo
-     *
-     * @param string $titulo
-     * @return Slide
-     */
-    public function setTitulo($titulo)
-    {
-        $this->titulo = $titulo;
-
-        return $this;
-    }
-
-    /**
-     * Get titulo
-     *
-     * @return string 
-     */
-    public function getTitulo()
-    {
-        return $this->titulo;
-    }
 
     
 
