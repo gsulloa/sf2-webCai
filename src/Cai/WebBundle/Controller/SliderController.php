@@ -239,8 +239,9 @@ class SliderController extends Controller
             }
         }elseif(sizeof($entity->getSlides()) > sizeof($data)/2){
             while (sizeof($entity->getSlides()) !== sizeof($data) / 2) {
-                $entity->removeSlide($entity->getSlides()->last());
-                $em->flush();
+                $slide_to_delete = $entity->getSlides()->last();
+                $entity->removeSlide($slide_to_delete);
+                $em->remove($slide_to_delete);
             }
         }
         $i = 0;
