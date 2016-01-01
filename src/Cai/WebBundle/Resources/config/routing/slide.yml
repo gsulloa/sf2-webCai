@@ -1,3 +1,9 @@
+slides_generate:
+    path:     /{id}/generate
+    defaults: { _controller: CaiWebBundle:Slider:slidesGenerate }
+    methods: POST
+
+
 slide:
     path:     /
     defaults: { _controller: "CaiWebBundle:Slide:index" }
