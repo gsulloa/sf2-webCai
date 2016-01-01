@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Persona
  *
- * @ORM\Table()
+ * @ORM\Table(name="web_persona")
  * @ORM\Entity
  */
 class Persona

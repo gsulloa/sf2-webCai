@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Slider
  *
- * @ORM\Table()
+ * @ORM\Table(name="web_slider")
  * @ORM\Entity
  */
 class Slider

@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Directiva
  *
- * @ORM\Table()
+ * @ORM\Table(name="web_directiva")
  * @ORM\Entity
  */
 class Directiva

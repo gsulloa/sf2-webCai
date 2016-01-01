@@ -13,7 +13,7 @@ use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
 
-class LoadRoleData extends AbstractFixture implements OrderedFixtureInterface
+class LoadContactoData extends AbstractFixture implements OrderedFixtureInterface
 {
     public function load(ObjectManager $manager)
     {

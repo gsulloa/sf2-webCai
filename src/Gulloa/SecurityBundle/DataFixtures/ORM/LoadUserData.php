@@ -11,28 +11,21 @@ use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Gulloa\SecurityBundle\Entity\Role;
+use Gulloa\SecurityBundle\Entity\User;
 
-class LoadRoleData extends AbstractFixture implements OrderedFixtureInterface
+class LoadUserData extends AbstractFixture implements OrderedFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
-        $array = [
-            'ROLE_SUPER_ADMIN',
-            'ROLE_ADMIN',
-            'ROLE_USER',
-            'ROLE_EDITOR'
-        ];
-        foreach($array as $element){
-            $role = new Role();
-            $role->setEtiqueta($element);
-            $manager->persist($role);
-        }
-        
+        $user = new User();
+        $user->setUsername('root')
+            ->setPassword('');
+        $manager->persist($user);
         $manager->flush();
     }
 
     public function getOrder()
     {
-        return 2;
+        return 3;
     }
 }

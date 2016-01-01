@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="137ab380-85d0-4c37-bae2-fb12ce286681" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Gulloa/SecurityBundle/DataFixtures/ORM/LoadUserData.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Controller/EntradaController.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Controller/EntradaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Form/EntradaType.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Form/EntradaType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Entrada/new.html.twig" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Entrada/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/public/css/image_selector.css" afterPath="$PROJECT_DIR$/web/public/css/image_selector.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/DataFixtures/ORM/LoadContactoData.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/DataFixtures/ORM/LoadContactoData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Categoria.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Categoria.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Contacto.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Contacto.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Directiva.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Directiva.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Elemento.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Elemento.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Entrada.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Entrada.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Imagen.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Imagen.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Menu.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Menu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Pagina.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Pagina.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Persona.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Persona.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slider.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Tipo.php" afterPath="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Tipo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gulloa/SecurityBundle/DataFixtures/ORM/LoadRoleData.php" afterPath="$PROJECT_DIR$/src/Gulloa/SecurityBundle/DataFixtures/ORM/LoadRoleData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gulloa/SecurityBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/Gulloa/SecurityBundle/Entity/User.php" />
     </list>
     <ignored path="gulloasecurity.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,64 +41,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EntradaType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Form/EntradaType.php">
+      <file leaf-file-name="Tipo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Tipo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.923077">
-              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+            <state vertical-scroll-proportion="-5.8846154">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Entrada/new.html.twig">
+      <file leaf-file-name="Categoria.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Categoria.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.153846">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+            <state vertical-scroll-proportion="-0.65384614">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_selector.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/public/css/image_selector.css">
+      <file leaf-file-name="LoadContactoData.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/DataFixtures/ORM/LoadContactoData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.307692">
-              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/base.html.twig">
+      <file leaf-file-name="security.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.615385">
-              <caret line="30" column="90" selection-start-line="30" selection-start-column="90" selection-end-line="30" selection-end-column="90" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntradaController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Controller/EntradaController.php">
+      <file leaf-file-name="Entrada.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Entrada.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53103447">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-              <folding>
-                <marker date="1451655589840" expanded="true" signature="517:604" placeholder="SELECT e FRO..CaiWebBundle..." />
-                <marker date="1451655589840" expanded="true" signature="7218:7343" placeholder="SELECT entra..CaiWebBundle..." />
-              </folding>
+            <state vertical-scroll-proportion="-13.076923">
+              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/Form.php">
+      <file leaf-file-name="Pagina.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Pagina.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="473.30768">
-              <caret line="425" column="0" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
+            <state vertical-scroll-proportion="-13.076923">
+              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Role.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Gulloa/SecurityBundle/Entity/Role.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.076923">
+              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Gulloa/SecurityBundle/Entity/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231">
+              <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadUserData.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Gulloa/SecurityBundle/DataFixtures/ORM/LoadUserData.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.35172415">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -113,30 +152,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Gulloa/SecurityBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/Gulloa/SecurityBundle/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Contacto/show.html.twig" />
-        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Controller/ContactoController.php" />
-        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/config/routing/contacto.yml" />
-        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Contacto/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Contacto/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Gulloa/SecurityBundle/DataFixtures/ORM/LoadRoleData.php" />
-        <option value="$PROJECT_DIR$/src/Cai/WebBundle/DataFixtures/ORM/LoadContactoData.php" />
-        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Form/CategoriaType.php" />
-        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Categoria/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Categoria/new.html.twig" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Categoria/show.html.twig" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Entrada/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Categoria.php" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Categoria/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Utils/Auxiliar.php" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Controller/CategoriaController.php" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Entrada/show.html.twig" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Form/ImagenType.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Imagen/edit.html.twig" />
@@ -144,15 +170,12 @@
         <option value="$PROJECT_DIR$/web/public/css/sb-admin.css" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Imagen/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Entrada/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Imagen.php" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Imagen/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Form/SlideType.php" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Form/SliderType.php" />
-        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slider.php" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slide/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slide/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php" />
         <option value="$PROJECT_DIR$/web/public/js/image_selector.js" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Controller/SliderController.php" />
@@ -163,7 +186,23 @@
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Entrada/new.html.twig" />
         <option value="$PROJECT_DIR$/web/public/css/image_selector.css" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Controller/EntradaController.php" />
+        <option value="$PROJECT_DIR$/src/Gulloa/SecurityBundle/DataFixtures/ORM/LoadRoleData.php" />
+        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Elemento.php" />
+        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Directiva.php" />
+        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Imagen.php" />
+        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Menu.php" />
+        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Persona.php" />
+        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php" />
+        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slider.php" />
+        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Tipo.php" />
+        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Contacto.php" />
+        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Categoria.php" />
+        <option value="$PROJECT_DIR$/src/Cai/WebBundle/DataFixtures/ORM/LoadContactoData.php" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Entrada.php" />
+        <option value="$PROJECT_DIR$/src/Cai/WebBundle/Entity/Pagina.php" />
+        <option value="$PROJECT_DIR$/src/Gulloa/SecurityBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/Gulloa/SecurityBundle/DataFixtures/ORM/LoadUserData.php" />
       </list>
     </option>
   </component>
@@ -295,6 +334,84 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sf2-webCAi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sf2-webCAi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gulloa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecurityBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sf2-webCAi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sf2-webCAi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gulloa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecurityBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sf2-webCAi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sf2-webCAi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gulloa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecurityBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataFixtures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ORM" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -492,7 +609,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
+              <option name="myItemId" value="DataFixtures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ORM" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -514,6 +635,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sf2-webCAi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sf2-webCAi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sf2-webCAi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sf2-webCAi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -525,11 +678,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gulloa_dev\sf2-webCAi\src\Gulloa\SecurityBundle\DataFixtures\ORM" />
       <recent name="D:\gulloa_dev\sf2-webCAi\web\public\images" />
       <recent name="D:\gulloa_dev\sf2-webCAi\src\Cai\WebBundle\Entity" />
       <recent name="D:\gulloa_dev\sf2-webCAi\web\public" />
       <recent name="D:\gulloa_dev\sf2-webCAi\src\Cai\WebBundle" />
-      <recent name="D:\gulloa_dev\sf2-webCAi\src\Cai\FrontendBundle\Resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -617,91 +770,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Categoria/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49827588">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Controller/CategoriaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91206896">
-          <caret line="254" column="10" selection-start-line="227" selection-start-column="4" selection-end-line="254" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Categoria.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-64.80769">
-          <caret line="216" column="5" selection-start-line="216" selection-start-column="5" selection-end-line="216" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61551726">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Entrada/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61551726">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Form/PaginaType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Utils/Auxiliar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44310346">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28052804">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.058721934">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/uploads/biblioteca/imagenes/ec4922e18e4d1fd92c8fd05aabbda9c0902b1edf/directiva.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/uploads/biblioteca/imagenes/0afe24a8b7fe4b3d1595091edb570ec42be46ac4/small-asd.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/uploads/biblioteca/imagenes/ec4922e18e4d1fd92c8fd05aabbda9c0902b1edf/medium-directiva.jpeg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -828,21 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5793103">
-          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8396552">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/public/js/image_selector.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.018151816">
@@ -854,13 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.81353134">
           <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Imagen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="279" column="34" selection-start-line="279" selection-start-column="34" selection-end-line="279" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -890,14 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.615385">
-          <caret line="30" column="90" selection-start-line="30" selection-start-column="90" selection-end-line="30" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/Slider/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2637931">
@@ -910,14 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34827587">
           <caret line="247" column="20" selection-start-line="247" selection-start-column="20" selection-end-line="247" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/Form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="473.30768">
-          <caret line="425" column="0" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -946,10 +981,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Entrada.php">
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029310346">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.87931037">
+          <caret line="30" column="90" selection-start-line="30" selection-start-column="90" selection-end-line="30" selection-end-column="90" />
           <folding />
         </state>
       </provider>
@@ -962,6 +997,158 @@
             <marker date="1451655589840" expanded="true" signature="517:604" placeholder="SELECT e FRO..CaiWebBundle..." />
             <marker date="1451655589840" expanded="true" signature="7218:7343" placeholder="SELECT entra..CaiWebBundle..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.217241">
+          <caret line="425" column="0" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gulloa/SecurityBundle/DataFixtures/ORM/LoadRoleData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Elemento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2637931">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Directiva.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2637931">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Imagen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2637931">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2637931">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Persona.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2637931">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slide.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2637931">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Slider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2637931">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Tipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Contacto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2637931">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Categoria.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/DataFixtures/ORM/LoadContactoData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Entrada.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cai/WebBundle/Entity/Pagina.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gulloa/SecurityBundle/Entity/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gulloa/SecurityBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gulloa/SecurityBundle/DataFixtures/ORM/LoadUserData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35172415">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

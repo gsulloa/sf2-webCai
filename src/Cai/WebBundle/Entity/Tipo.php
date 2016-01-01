@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Tipo
  *
- * @ORM\Table()
+ * @ORM\Table(name="web_tipo")
  * @ORM\Entity
  */
 class Tipo

@@ -42,7 +42,7 @@ class User implements UserInterface, \Serializable
 
     /**
      * @ORM\ManyToMany(targetEntity="\Cai\WebBundle\Entity\Categoria", inversedBy="users")
-     * @ORM\JoinTable(name="user_categoria")
+     * @ORM\JoinTable(name="user_web_categoria")
      */
     private $categorias;
 
