@@ -34,10 +34,6 @@ cai_web_elemento:
     resource: "@CaiWebBundle/Resources/config/routing/elemento.yml"
     prefix:   /elemento
 
-cai_web_directiva:
-    resource: "@CaiWebBundle/Resources/config/routing/directiva.yml"
-    prefix:   /directiva
-
 cai_web_contacto:
     resource: "@CaiWebBundle/Resources/config/routing/contacto.yml"
     prefix:   /contacto
