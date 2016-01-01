@@ -1,3 +1,7 @@
+cai_web_ajax:
+    resource: "@CaiWebBundle/Resources/config/routing/ajax.yml"
+    prefix:   /ajax
+
 cai_web_imagen:
     resource: "@CaiWebBundle/Resources/config/routing/imagen.yml"
     prefix:   /imagen

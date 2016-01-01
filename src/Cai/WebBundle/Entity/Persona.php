@@ -63,12 +63,6 @@ class Persona
      */
     private $facebook;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="Directiva", inversedBy="personas")
-     * @ORM\JoinColumn(name="directiva_id", referencedColumnName="id")
-     */
-    private $directiva;
-
 
     /**
      * Get id
@@ -216,29 +210,6 @@ class Persona
     public function getFacebook()
     {
         return $this->facebook;
-    }
-
-    /**
-     * Set directiva
-     *
-     * @param \Cai\WebBundle\Entity\Directiva $directiva
-     * @return Persona
-     */
-    public function setDirectiva(\Cai\WebBundle\Entity\Directiva $directiva = null)
-    {
-        $this->directiva = $directiva;
-
-        return $this;
-    }
-
-    /**
-     * Get directiva
-     *
-     * @return \Cai\WebBundle\Entity\Directiva 
-     */
-    public function getDirectiva()
-    {
-        return $this->directiva;
     }
 
     public function __toString()

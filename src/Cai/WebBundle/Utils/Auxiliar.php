@@ -8,9 +8,13 @@
 
 namespace Cai\WebBundle\Utils;
 
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class Auxiliar
+class Auxiliar extends Controller
 {
+    private $em;
+    //Genera Slug unico, agregandole un numero en caso de que ya exista
+    // ej: ruta, ruta-2, ruta-3....
     public function slugGenerator($slug,$array){
         $i = 1;
         if(in_array($slug,$array)) {
@@ -23,7 +27,8 @@ class Auxiliar
         return $slug;
     }
 
-    function toAscii($str, $replace=array(), $delimiter='-') {
+    //http://cubiq.org/the-perfect-php-clean-url-generator
+    public function toAscii($str, $replace=array(), $delimiter='-') {
         if( !empty($replace) ) {
             $str = str_replace((array)$replace, ' ', $str);
         }
@@ -35,4 +40,23 @@ class Auxiliar
 
         return $clean;
     }
+
+    //Funcion que entrega 12 imagenes desde la variable inicio
+    public function getImages($inicio = 0){
+        $dql = "
+            SELECT image
+            FROM CaiWebBundle:Imagen image
+        ";
+        $images = $this->em->createQuery($dql)
+            ->setMaxResults(12)
+            ->setFirstResult($inicio)
+            ->getResult();
+        return $images;
+    }
+
+    public function __construct($entityManager)
+    {
+        $this->em = $entityManager;
+    }
+
 }

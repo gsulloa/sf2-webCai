@@ -2,7 +2,6 @@
 
 namespace Cai\WebBundle\Controller;
 
-use Cai\WebBundle\Utils\Auxiliar;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -96,6 +95,8 @@ class EntradaController extends Controller
         $form   = $this->createCreateForm($entity);
         $em = $this->getDoctrine()->getManager();
         $images = $em->getRepository('CaiWebBundle:Imagen')->findAll();
+        $aux = $this->get('cai_web.auxiliar');
+        $images = $aux->getImages();
         return $this->render('CaiWebBundle:Entrada:new.html.twig', array(
             'entity' => $entity,
             'form'   => $form->createView(),
@@ -246,7 +247,7 @@ class EntradaController extends Controller
     private function generatingSlug(Entrada $entity)
     {
         $em = $this->getDoctrine()->getManager();
-        $aux = new Auxiliar();
+        $aux = $this->get('cai_web.auxiliar');
         $slug = $aux->toAscii($entity->getTitulo());
         $querySlug = $slug . '%';
         $entradas = $em->createQuery("

@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new Cai\WebBundle\CaiWebBundle(),
             new Cai\FrontendBundle\CaiFrontendBundle(),
             new SC\DatetimepickerBundle\SCDatetimepickerBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

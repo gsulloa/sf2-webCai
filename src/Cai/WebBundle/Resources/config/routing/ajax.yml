@@ -1,0 +1,5 @@
+scroll_pagination_image:
+    path: /scrolling/{start}
+    defaults: { _controller: CaiWebBundle:Ajax:scrollPagination }
+    options:
+        expose: true

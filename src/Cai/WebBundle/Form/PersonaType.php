@@ -21,7 +21,6 @@ class PersonaType extends AbstractType
             ->add('mail')
             ->add('twitter')
             ->add('facebook')
-            ->add('directiva')
         ;
     }
     
