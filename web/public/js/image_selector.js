@@ -42,4 +42,9 @@ function hide_image_selector(){
     $("#image_selector_background").hide();
     $('.col_selecting_image').css('background-color','white');
 }
-
+//Detecta final del div
+$('#image_selector_div').scroll(function() {
+    if($(this).scrollTop() +$(this).outerHeight() >=  $(this)[0].scrollHeight) {
+       alert("bottom!");
+    }
+});
