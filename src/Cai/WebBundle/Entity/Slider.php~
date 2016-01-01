@@ -116,4 +116,27 @@ class Slider
     {
         return $this->titulo;
     }
+
+    /**
+     * Set time
+     *
+     * @param integer $time
+     * @return Slider
+     */
+    public function setTime($time)
+    {
+        $this->time = $time;
+
+        return $this;
+    }
+
+    /**
+     * Get time
+     *
+     * @return integer 
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
 }

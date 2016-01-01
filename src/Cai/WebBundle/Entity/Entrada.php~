@@ -67,6 +67,13 @@ class Entrada
      */
     private $imagen;
 
+    /*
+     * @var integer
+     *
+     * @ORM\Column(name="version", type="integer")
+     */
+    private $version;
+
 
     /**
      * Get id

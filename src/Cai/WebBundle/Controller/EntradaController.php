@@ -44,10 +44,16 @@ class EntradaController extends Controller
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
 
+
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            //generar Slug
             $this->generatingSlug($entity);
+            //agregar creado por usuario logeado
             $entity->setUser($this->getUser());
+            //agregar imagen
+            $image = $em->getRepository('CaiWebBundle:Imagen')->find(substr($request->request->get('img_slide_0'),6));
+            $entity->setImagen($image);
             $em->persist($entity);
             $em->flush();
 
@@ -88,9 +94,12 @@ class EntradaController extends Controller
         $entity = new Entrada();
         $entity->setFecha(new \DateTime());
         $form   = $this->createCreateForm($entity);
+        $em = $this->getDoctrine()->getManager();
+        $images = $em->getRepository('CaiWebBundle:Imagen')->findAll();
         return $this->render('CaiWebBundle:Entrada:new.html.twig', array(
             'entity' => $entity,
             'form'   => $form->createView(),
+            'images' => $images
         ));
     }
 

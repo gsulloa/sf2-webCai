@@ -25,3 +25,7 @@
     padding: 10px;
     height: 220px;
 }
+
+.selecting_image:hover{
+    opacity: .5;
+}
