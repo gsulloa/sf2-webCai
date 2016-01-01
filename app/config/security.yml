@@ -4,6 +4,7 @@ security:
     role_hierarchy:
         ROLE_SUPER_ADMIN:   ROLE_ADMIN
         ROLE_ADMIN:   ['ROLE_USER', 'ROLE_EDITOR']
+        ROLE_EDITOR: ROLE_JEFE_DE_COMISION
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
         chain_provider:
@@ -49,6 +50,19 @@ security:
 
 
     access_control:
-        - { path: ^/backend, roles: ROLE_EDITOR }
+        - { path: ^/backend/role, roles: ROLE_SUPER_ADMIN }
+
+        - { path: ^/backend/user, roles: ROLE_ADMIN }
+        - { path: ^/backend/categoria, roles: ROLE_ADMIN }
+
+        - { path: ^/backend/menu, roles: ROLE_EDITOR }
+        - { path: ^/backend/tipo, roles: ROLE_EDITOR }
+        - { path: ^/backend/menu, roles: ROLE_EDITOR }
+        - { path: ^/backend/persona, roles: ROLE_EDITOR }
+        - { path: ^/backend/slider, roles: ROLE_EDITOR }
+        - { path: ^/backend/menu, roles: ROLE_EDITOR }
+        - { path: ^/backend/contacto, roles: ROLE_EDITOR }
+
+        - { path: ^/backend, roles: ROLE_JEFE_DE_COMISION }
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }

@@ -9,7 +9,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        if ($this->get('security.authorization_checker')->isGranted('ROLE_EDITOR')) {
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_JEFE_DE_COMISION')) {
             return $this->redirect($this->generateUrl('cai_web_homepage'));
         }
         return $this->redirect($this->generateUrl('cai_frontend_homepage'));

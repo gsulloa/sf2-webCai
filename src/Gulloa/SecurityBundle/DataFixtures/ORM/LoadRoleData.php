@@ -20,7 +20,8 @@ class LoadRoleData extends AbstractFixture implements OrderedFixtureInterface
             'ROLE_SUPER_ADMIN',
             'ROLE_ADMIN',
             'ROLE_USER',
-            'ROLE_EDITOR'
+            'ROLE_EDITOR',
+            'ROLE_JEFE_DE_COMISION'
         ];
         foreach($array as $element){
             $role = new Role();
