@@ -1,3 +1,7 @@
+cai_web_userprofile:
+    resource: "@CaiWebBundle/Resources/config/routing/userprofile.yml"
+    prefix:   /userprofile
+
 cai_web_evento:
     resource: "@CaiWebBundle/Resources/config/routing/evento.yml"
     prefix:   /evento

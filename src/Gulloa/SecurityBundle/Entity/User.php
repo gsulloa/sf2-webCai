@@ -57,6 +57,11 @@ class User implements UserInterface, \Serializable
     private $paginas;
 
     /**
+     * @ORM\OneToOne(targetEntity="\Cai\WebBundle\Entity\UserProfile",mappedBy="user")
+     */
+    private $profile;
+
+    /**
      * Get id
      *
      * @return integer
@@ -325,5 +330,28 @@ class User implements UserInterface, \Serializable
      */
     public function __toString(){
         return $this->username;
+    }
+
+    /**
+     * Set profile
+     *
+     * @param \Cai\WebBundle\Entity\UserProfile $profile
+     * @return User
+     */
+    public function setProfile(\Cai\WebBundle\Entity\UserProfile $profile = null)
+    {
+        $this->profile = $profile;
+
+        return $this;
+    }
+
+    /**
+     * Get profile
+     *
+     * @return \Cai\WebBundle\Entity\UserProfile 
+     */
+    public function getProfile()
+    {
+        return $this->profile;
     }
 }
