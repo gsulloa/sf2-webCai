@@ -1,0 +1,30 @@
+evento:
+    path:     /
+    defaults: { _controller: "CaiWebBundle:Evento:index" }
+
+evento_show:
+    path:     /{id}/show
+    defaults: { _controller: "CaiWebBundle:Evento:show" }
+
+evento_new:
+    path:     /new
+    defaults: { _controller: "CaiWebBundle:Evento:new" }
+
+evento_create:
+    path:     /create
+    defaults: { _controller: "CaiWebBundle:Evento:create" }
+    methods:  POST
+
+evento_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CaiWebBundle:Evento:edit" }
+
+evento_update:
+    path:     /{id}/update
+    defaults: { _controller: "CaiWebBundle:Evento:update" }
+    methods:  [POST, PUT]
+
+evento_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CaiWebBundle:Evento:delete" }
+    methods:  [POST, DELETE]

@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Categoria
  *
- * @ORM\Table()
+ * @ORM\Table(name="web_categoria")
  * @ORM\Entity
  */
 class Categoria
@@ -49,6 +49,11 @@ class Categoria
      * @ORM\ManyToMany(targetEntity="Pagina", mappedBy="categorias")
      */
     private $paginas;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Evento",mappedBy="categoria")
+     */
+    private $eventos;
 
     /**
      * Get id

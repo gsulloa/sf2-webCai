@@ -79,6 +79,9 @@
                 <li {{ tab == 'contacto' ? 'class="active"' : '' }}>
                     <a href="{{ path('contacto') }}"><i class="fa fa-info-circle fa-fw"></i> Contacto</a>
                 </li>
+                <li {{ tab == 'evento' ? 'class="active"' : '' }}>
+                    <a href="{{ path('evento') }}"><i class="fa fa-calendar fa-fw"></i> Eventos</a>
+                </li>
                 {% endif %}
                 {% if is_granted('ROLE_ADMIN') %}
                 <li {{ tab == 'role' ? 'class="active"' : '' }}>

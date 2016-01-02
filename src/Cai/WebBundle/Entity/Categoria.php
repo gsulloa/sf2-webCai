@@ -51,6 +51,11 @@ class Categoria
     private $paginas;
 
     /**
+     * @ORM\OneToMany(targetEntity="Evento",mappedBy="categoria")
+     */
+    private $eventos;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -216,5 +221,38 @@ class Categoria
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Add eventos
+     *
+     * @param \Cai\WebBundle\Entity\Evento $eventos
+     * @return Categoria
+     */
+    public function addEvento(\Cai\WebBundle\Entity\Evento $eventos)
+    {
+        $this->eventos[] = $eventos;
+
+        return $this;
+    }
+
+    /**
+     * Remove eventos
+     *
+     * @param \Cai\WebBundle\Entity\Evento $eventos
+     */
+    public function removeEvento(\Cai\WebBundle\Entity\Evento $eventos)
+    {
+        $this->eventos->removeElement($eventos);
+    }
+
+    /**
+     * Get eventos
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEventos()
+    {
+        return $this->eventos;
     }
 }

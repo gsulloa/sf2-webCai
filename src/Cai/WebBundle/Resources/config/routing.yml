@@ -1,3 +1,7 @@
+cai_web_evento:
+    resource: "@CaiWebBundle/Resources/config/routing/evento.yml"
+    prefix:   /evento
+
 cai_web_ajax:
     resource: "@CaiWebBundle/Resources/config/routing/ajax.yml"
     prefix:   /ajax

@@ -231,7 +231,7 @@ class CategoriaController extends Controller
      */
     private function generatingSlug(Categoria $entity){
         $em = $this->getDoctrine()->getManager();
-        $aux = new Auxiliar();
+        $aux = $this->get('cai_web.auxiliar');
         $slug = $aux->toAscii($entity->getEtiqueta());
         $querySlug = $slug . '%';
         $categorias = $em->createQuery("

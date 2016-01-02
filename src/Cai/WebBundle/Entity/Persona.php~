@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Persona
  *
- * @ORM\Table()
+ * @ORM\Table(name="web_persona")
  * @ORM\Entity
  */
 class Persona
@@ -62,12 +62,6 @@ class Persona
      * @ORM\Column(name="facebook", type="string", length=255)
      */
     private $facebook;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Directiva", inversedBy="personas")
-     * @ORM\JoinColumn(name="directiva_id", referencedColumnName="id")
-     */
-    private $directiva;
 
 
     /**
@@ -216,29 +210,6 @@ class Persona
     public function getFacebook()
     {
         return $this->facebook;
-    }
-
-    /**
-     * Set directiva
-     *
-     * @param \Cai\WebBundle\Entity\Directiva $directiva
-     * @return Persona
-     */
-    public function setDirectiva(\Cai\WebBundle\Entity\Directiva $directiva = null)
-    {
-        $this->directiva = $directiva;
-
-        return $this;
-    }
-
-    /**
-     * Get directiva
-     *
-     * @return \Cai\WebBundle\Entity\Directiva 
-     */
-    public function getDirectiva()
-    {
-        return $this->directiva;
     }
 
     public function __toString()

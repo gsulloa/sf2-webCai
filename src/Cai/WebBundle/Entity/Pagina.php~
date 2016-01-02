@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Pagina
  *
- * @ORM\Table()
+ * @ORM\Table(name="web_pagina")
  * @ORM\Entity
  */
 class Pagina
@@ -51,7 +51,7 @@ class Pagina
 
     /**
      * @ORM\ManyToMany(targetEntity="Categoria", inversedBy="paginas")
-     * @ORM\JoinTable(name="pagina_categoria")
+     * @ORM\JoinTable(name="web_pagina_categoria")
      */
     private $categorias;
 
