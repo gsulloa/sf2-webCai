@@ -6,7 +6,6 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Filename</th>
                 <th>Foto</th>
                 <th>Actions</th>
@@ -15,7 +14,6 @@
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('imagen_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.filename }}</td>
                 <td><img src="{{ asset('uploads/biblioteca/imagenes/') }}{{ entity.filenamebinary }}/small-{{ entity.filename }}"> </td>
                 <td>

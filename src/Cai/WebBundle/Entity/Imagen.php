@@ -164,21 +164,22 @@ class Imagen
 
         # ruta de la imagen a redimensionar
         $imagen = $this->getUploadRootDir() . $this->filename;
+        //TEST
+
         # ruta de la imagen final, si se pone el mismo nombre que la imagen, esta se sobreescribe
         $imagen_final_small = $this->getUploadRootDir() . 'small-' . $this->filename;
         $imagen_final_medium = $this->getUploadRootDir() . 'medium-' . $this->filename;
-        $ancho_nuevo = 200;
-        $alto_nuevo = 200;
+
+        $this->smart_resize_image($imagen,null,800,800,true,$imagen_final_medium,false,false,50);
+        $this->smart_resize_image($imagen,null,200,200,true,$imagen_final_small,false,false,50);
+
         /*
         if (!is_dir($this->getUploadRootDir().'/small/')) {
             mkdir($this->getUploadRootDir().'/small/', 0777, true);
         }*/
         ## FIN CONFIGURACION #############################
 
-        $this->redim($imagen, $imagen_final_small, $ancho_nuevo, $alto_nuevo);
-        $ancho_nuevo = 800;
-        $alto_nuevo = 800;
-        $this->redim($imagen, $imagen_final_medium, $ancho_nuevo, $alto_nuevo);
+
 
         // check if we have an old image
         /*
@@ -261,71 +262,6 @@ class Imagen
         $this->deleteForm = $deleteForm;
     }
 
-
-    function redim($ruta1, $ruta2, $ancho, $alto)
-    {
-        # se obtene la dimension y tipo de imagen
-        $datos = getimagesize($ruta1);
-
-        $ancho_orig = $datos[0]; # Anchura de la imagen original
-        $alto_orig = $datos[1];    # Altura de la imagen original
-        $tipo = $datos[2];
-
-        if ($tipo == 1) { # GIF
-            if (function_exists("imagecreatefromgif"))
-                $img = imagecreatefromgif($ruta1);
-            else
-                return false;
-        } else if ($tipo == 2) { # JPG
-            if (function_exists("imagecreatefromjpeg"))
-                $img = imagecreatefromjpeg($ruta1);
-            else
-                return false;
-        } else if ($tipo == 3) { # PNG
-            if (function_exists("imagecreatefrompng"))
-                $img = imagecreatefrompng($ruta1);
-            else
-                return false;
-        }
-
-        # Se calculan las nuevas dimensiones de la imagen
-        if ($ancho_orig > $alto_orig) {
-            $ancho_dest = $ancho;
-            $alto_dest = ($ancho_dest / $ancho_orig) * $alto_orig;
-        } else {
-            $alto_dest = $alto;
-            $ancho_dest = ($alto_dest / $alto_orig) * $ancho_orig;
-        }
-
-        // imagecreatetruecolor, solo estan en G.D. 2.0.1 con PHP 4.0.6+
-        $img2 = @imagecreatetruecolor($ancho_dest, $alto_dest) or $img2 = imagecreate($ancho_dest, $alto_dest);
-
-        // Redimensionar
-        // imagecopyresampled, solo estan en G.D. 2.0.1 con PHP 4.0.6+
-        @imagecopyresampled($img2, $img, 0, 0, 0, 0, $ancho_dest, $alto_dest, $ancho_orig, $alto_orig) or imagecopyresized($img2, $img, 0, 0, 0, 0, $ancho_dest, $alto_dest, $ancho_orig, $alto_orig);
-
-        // Crear fichero nuevo, según extensión.
-        if ($tipo == 1) // GIF
-            if (function_exists("imagegif"))
-                imagegif($img2, $ruta2);
-            else
-                return false;
-
-        if ($tipo == 2) // JPG
-            if (function_exists("imagejpeg"))
-                imagejpeg($img2, $ruta2);
-            else
-                return false;
-
-        if ($tipo == 3)  // PNG
-            if (function_exists("imagepng"))
-                imagepng($img2, $ruta2);
-            else
-                return false;
-
-        return true;
-    }
-
     public function __toString()
     {
         return $this->filename;
@@ -403,5 +339,121 @@ class Imagen
     public function getSlide()
     {
         return $this->slide;
+    }
+    /**
+     * easy image resize function
+     * https://github.com/Nimrod007/PHP_image_resize
+     * @param  $file - file name to resize
+     * @param  $string - The image data, as a string
+     * @param  $width - new image width
+     * @param  $height - new image height
+     * @param  $proportional - keep image proportional, default is no
+     * @param  $output - name of the new file (include path if needed)
+     * @param  $delete_original - if true the original image will be deleted
+     * @param  $use_linux_commands - if set to true will use "rm" to delete the image, if false will use PHP unlink
+     * @param  $quality - enter 1-100 (100 is best quality) default is 100
+     * @return boolean|resource
+     */
+    function smart_resize_image($file,
+                                $string             = null,
+                                $width              = 0,
+                                $height             = 0,
+                                $proportional       = false,
+                                $output             = 'file',
+                                $delete_original    = true,
+                                $use_linux_commands = false,
+                                $quality = 100
+    ) {
+
+        if ( $height <= 0 && $width <= 0 ) return false;
+        if ( $file === null && $string === null ) return false;
+        # Setting defaults and meta
+        $info                         = $file !== null ? getimagesize($file) : getimagesizefromstring($string);
+        $image                        = '';
+        $final_width                  = 0;
+        $final_height                 = 0;
+        list($width_old, $height_old) = $info;
+        $cropHeight = $cropWidth = 0;
+        # Calculating proportionality
+        if ($proportional) {
+            if      ($width  == 0)  $factor = $height/$height_old;
+            elseif  ($height == 0)  $factor = $width/$width_old;
+            else                    $factor = min( $width / $width_old, $height / $height_old );
+            $final_width  = round( $width_old * $factor );
+            $final_height = round( $height_old * $factor );
+        }
+        else {
+            $final_width = ( $width <= 0 ) ? $width_old : $width;
+            $final_height = ( $height <= 0 ) ? $height_old : $height;
+            $widthX = $width_old / $width;
+            $heightX = $height_old / $height;
+
+            $x = min($widthX, $heightX);
+            $cropWidth = ($width_old - $width * $x) / 2;
+            $cropHeight = ($height_old - $height * $x) / 2;
+        }
+        # Loading image to memory according to type
+        switch ( $info[2] ) {
+            case IMAGETYPE_JPEG:  $file !== null ? $image = imagecreatefromjpeg($file) : $image = imagecreatefromstring($string);  break;
+            case IMAGETYPE_GIF:   $file !== null ? $image = imagecreatefromgif($file)  : $image = imagecreatefromstring($string);  break;
+            case IMAGETYPE_PNG:   $file !== null ? $image = imagecreatefrompng($file)  : $image = imagecreatefromstring($string);  break;
+            default: return false;
+        }
+
+
+        # This is the resizing/resampling/transparency-preserving magic
+        $image_resized = imagecreatetruecolor( $final_width, $final_height );
+        if ( ($info[2] == IMAGETYPE_GIF) || ($info[2] == IMAGETYPE_PNG) ) {
+            $transparency = imagecolortransparent($image);
+            $palletsize = imagecolorstotal($image);
+            if ($transparency >= 0 && $transparency < $palletsize) {
+                $transparent_color  = imagecolorsforindex($image, $transparency);
+                $transparency       = imagecolorallocate($image_resized, $transparent_color['red'], $transparent_color['green'], $transparent_color['blue']);
+                imagefill($image_resized, 0, 0, $transparency);
+                imagecolortransparent($image_resized, $transparency);
+            }
+            elseif ($info[2] == IMAGETYPE_PNG) {
+                imagealphablending($image_resized, false);
+                $color = imagecolorallocatealpha($image_resized, 0, 0, 0, 127);
+                imagefill($image_resized, 0, 0, $color);
+                imagesavealpha($image_resized, true);
+            }
+        }
+        imagecopyresampled($image_resized, $image, 0, 0, $cropWidth, $cropHeight, $final_width, $final_height, $width_old - 2 * $cropWidth, $height_old - 2 * $cropHeight);
+
+
+        # Taking care of original, if needed
+        if ( $delete_original ) {
+            if ( $use_linux_commands ) exec('rm '.$file);
+            else @unlink($file);
+        }
+        # Preparing a method of providing result
+        switch ( strtolower($output) ) {
+            case 'browser':
+                $mime = image_type_to_mime_type($info[2]);
+                header("Content-type: $mime");
+                $output = NULL;
+                break;
+            case 'file':
+                $output = $file;
+                break;
+            case 'return':
+                return $image_resized;
+                break;
+            default:
+                break;
+        }
+
+        # Writing image according to type to the output destination and image quality
+        switch ( $info[2] ) {
+            case IMAGETYPE_GIF:   imagegif($image_resized, $output);    break;
+            case IMAGETYPE_JPEG:  imagejpeg($image_resized, $output, $quality);   break;
+            case IMAGETYPE_PNG:
+                $quality = 9 - (int)((0.9*$quality)/10.0);
+                imagepng($image_resized, $output, $quality);
+                break;
+            default: return false;
+        }
+        return true;
     }
 }
