@@ -15,15 +15,6 @@ imagen_create:
     defaults: { _controller: "CaiWebBundle:Imagen:create" }
     methods:  POST
 
-imagen_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "CaiWebBundle:Imagen:edit" }
-
-imagen_update:
-    path:     /{id}/update
-    defaults: { _controller: "CaiWebBundle:Imagen:update" }
-    methods:  [POST, PUT]
-
 imagen_delete:
     path:     /{id}/delete
     defaults: { _controller: "CaiWebBundle:Imagen:delete" }

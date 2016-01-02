@@ -200,6 +200,7 @@ class Imagen
         if ($file = $this->getAbsolutePath()) {
             unlink($file);
             unlink($this->getUploadRootDir() . '/small-' . $this->filename);
+            unlink($this->getUploadRootDir() . '/medium-' . $this->filename);
             rmdir($this->getUploadDir());
         }
     }
