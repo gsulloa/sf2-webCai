@@ -1,3 +1,4 @@
+/.idea
 /web/uploads/
 /web/uploads/*
 /app/bootstrap.php.cache

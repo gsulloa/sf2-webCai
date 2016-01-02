@@ -103,7 +103,8 @@ class SliderController extends Controller
         }
 
         $deleteForm = $this->createDeleteForm($id);
-        $images = $em->getRepository('CaiWebBundle:Imagen')->findAll();
+        $auxiliar = $this->get('cai_web.auxiliar');
+        $images = $auxiliar->getImages();
 
         return $this->render('CaiWebBundle:Slider:show.html.twig', array(
             'entity'            => $entity,
@@ -263,7 +264,5 @@ class SliderController extends Controller
         return $this->redirect($this->generateUrl('slider_show',array(
             'id'=>$id
         )));
-
-        exit;
     }
 }
