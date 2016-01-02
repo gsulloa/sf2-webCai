@@ -46,6 +46,7 @@ class Auxiliar extends Controller
         $dql = "
             SELECT image
             FROM CaiWebBundle:Imagen image
+            ORDER BY image.id DESC
         ";
         $images = $this->em->createQuery($dql)
             ->setMaxResults(12)

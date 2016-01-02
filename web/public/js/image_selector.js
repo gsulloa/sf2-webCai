@@ -12,9 +12,6 @@ $('.selecting_image').click(function () {
 $('.selecting_image').dblclick(function () {
     changeImage();
 });
-$('#image_select').click(function () {
-    changeImage();
-});
 function changeImage(){
     hide_image_selector();
     var imagen =  $('.row#'+row_changing).children(".col-md-4").children().children();
@@ -42,9 +39,7 @@ function hide_image_selector(){
     $("#image_selector_background").hide();
     $('.col_selecting_image').css('background-color','white');
 }
-//Detecta final del div
-$('#image_selector_div').scroll(function() {
-    if($(this).scrollTop() +$(this).outerHeight() >=  $(this)[0].scrollHeight) {
-       alert("bottom!");
-    }
-});
+
+/*<div class="col-md-3 col_selecting_image">
+    <img id="image_6134" class="selecting_image img-responsive" src="/sf2-webCAi/web/uploads/biblioteca/imagenes/49356a8f1d35ff084ef1ac9365dcaddd923b18e1/small-love.jpeg">
+    </div>*/

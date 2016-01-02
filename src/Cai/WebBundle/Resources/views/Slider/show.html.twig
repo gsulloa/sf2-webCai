@@ -125,6 +125,10 @@
             var path_label = $('<label for="path_slide'+count+'">Path: </label>');
             //crear input path
             var path_input = $('<input  name="path_slide_'+count+'" class="path" type="text" id="path_slide_'+count+'">');
+            //evento para guardar path
+            $(path_input).keyup(function () {
+                $(this).attr("value", $(this).val());
+            });
             //crear btn imagen selector
             var img_selector = $('<div class="img_selector btn btn-primary" id="img_selector_slide_'+count+'">Escoger imágen</div>');
             //agregar evento image selector
@@ -157,7 +161,7 @@
         $('.delete_slide').click(function () {
             deleting_slide($(this))
         });
-        $('.path').keypress(function () {
+        $('.path').keyup(function () {
             $(this).attr("value", $(this).val());
         });
 
@@ -191,17 +195,77 @@
             var aux = origenRow.html();
             origenRow.html(targetRow.html());
             targetRow.html(aux);
-            $('.path').keypress(function () {
+
+            //Entregarle nuevamente los eventos
+            origenRow.find('.path').keyup(function () {
                 $(this).attr("value", $(this).val());
             });
-            $('.delete_slide').click(function () {
+            targetRow.find('.path').keyup(function () {
+                $(this).attr("value", $(this).val());
+            });
+            origenRow.find('.delete_slide').click(function () {
                 deleting_slide($(this))
             });
-            $('.img_selector').click(function () {
+            targetRow.find('.delete_slide').click(function () {
+                deleting_slide($(this))
+            });
+            origenRow.find('.img_selector').click(function () {
+                show_image_selector($(this));
+            });
+            targetRow.find('.img_selector').click(function () {
                 show_image_selector($(this));
             });
         }
     </script>
     <script type="text/javascript" src="{{ asset('public/js/image_selector.js') }}"></script>
+    <script>
+        //Imagenes actualmente cargadas
+        var images_count = 12;
+        //Detecta final del div
+        $('#image_selector_div').scroll(function() {
+            if($(this).scrollTop() +$(this).outerHeight() >=  $(this)[0].scrollHeight) {
+                //Ajax para cargar nuevas imagenes
+                $.ajax({
+                    url: Routing.generate('scroll_pagination_image',{'start':images_count}),
+                    type: "GET",
+                    success: function(data) {
+                        //entregar de a 12 imagenes
+                        images_count = images_count + 12;
+                        //formar JSON con data recibida
+                        data = JSON.parse(data);
+                        var rows = [];
+                        //Crear las rows necesarias
+                        for (i = 0; i < data.length / 4; i++) {
+                            rows.push($('<div class="row"></div>'))
+                        }
 
+                        var created_images_count = 0;
+                        var new_image;
+                        //Crear las imagenes del json
+                        for(image in data){
+                            new_col = $('<div class="col-md-3 col_selecting_image"></div>');
+                            new_image = $('<img id="image_'+data[image].id+'" class="selecting_image img-responsive" src="{{ asset('uploads/biblioteca/imagenes/') }}'+data[image].filenamebinary+'/small-'+data[image].filename+'">');
+                            //Asigna los eventos para seleccionarlas
+                            $(new_image).click(function () {
+                                $('.col_selecting_image').css('background-color','white');
+                                $(this).parent().css('background-color','blue');
+                                selected_image = $(this)[0];
+                            });
+                            $(new_image).dblclick(function () {
+                                changeImage();
+                            });
+                            new_col.append(new_image);
+                            //Agrega a la row indicada
+                            rows[parseInt(created_images_count++ / 4)].append(new_col);
+                        }
+                        //agrega las rows al div
+                        for(row in rows){
+                            $('#image_selector_div').append(rows[row]);
+                        }
+                    }
+                });
+
+            }
+        });
+    </script>
 {% endblock %}

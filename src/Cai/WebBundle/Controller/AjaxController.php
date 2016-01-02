@@ -13,6 +13,7 @@ class AjaxController extends Controller
         $array = array();
         foreach($images as $image){
             $aux = [
+                'id'             => $image->getId(),
                 'filenamebinary' => $image->getFilenamebinary(),
                 'filename'       => $image->getFilename()
             ];

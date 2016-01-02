@@ -8,9 +8,6 @@
         {% set count = count + 1 %}
         {% if count == 4 %}</div><br>{% set count = 0 %}{% endif %}
     {% endfor %}
-    {% if count < 4 %}</div>{% endif %}
-<div class="row">
-    <button id="image_select" class="btn btn-primary pull-right">Seleccionar</button>
-</div>
+    {% if count < 4 and count != 0 %}</div>{% endif %}
 </div>
 <div id="image_selector_background" hidden />
