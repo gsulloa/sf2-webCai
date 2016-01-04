@@ -29,3 +29,6 @@
 .selecting_image:hover{
     opacity: .5;
 }
+.selecting_image{
+    margin: auto;
+}

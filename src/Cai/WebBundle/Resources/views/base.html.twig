@@ -84,9 +84,6 @@
                 </li>
                 {% endif %}
                 {% if is_granted('ROLE_ADMIN') %}
-                <li {{ tab == 'role' ? 'class="active"' : '' }}>
-                    <a href="{{ path('role') }}"><i class="fa fa-home fa-fw"></i> Role</a>
-                </li>
                 <li {{ tab == 'user' ? 'class="active"' : '' }}>
                     <a href="{{ path('user') }}"><i class="fa fa-user-plus fa-fw"></i> User</a>
                 </li>
@@ -94,7 +91,11 @@
                     <a href="{{ path('categoria') }}"><i class="fa fa-list-alt fa-fw"></i> Categoria</a>
                 </li>
                 {% endif %}
-
+                {% if is_granted('ROLE_SUPER_ADMIN') %}
+                <li {{ tab == 'role' ? 'class="active"' : '' }}>
+                    <a href="{{ path('role') }}"><i class="fa fa-home fa-fw"></i> Role</a>
+                </li>
+                {% endif %}
 
             </ul>
             <ul class="nav navbar-nav navbar-right">

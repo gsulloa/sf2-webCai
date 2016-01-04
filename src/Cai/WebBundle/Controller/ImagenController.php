@@ -19,11 +19,23 @@ class ImagenController extends Controller
      * Lists all Imagen entities.
      *
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('CaiWebBundle:Imagen')->findAll();
+        $sql = "
+            SELECT image
+            FROM CaiWebBundle:Imagen image
+            ORDER BY image.id DESC
+        ";
+        $query = $em->createQuery($sql);
+
+        $paginator  = $this->get('knp_paginator');
+        $entities = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            20/*limit per page*/
+        );
 
         return $this->render('CaiWebBundle:Imagen:index.html.twig', array(
             'entities' => $entities,
